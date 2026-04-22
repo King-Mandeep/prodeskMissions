@@ -1,0 +1,128 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 24px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 12px 0;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+/* Side by side row */
+.card-row {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.card-row .card {
+  flex: 1;
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #6366f1;
+}
+
+button {
+  padding: 10px 16px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 6px;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+#salaryDisplay {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+#balance {
+  font-size: 36px;
+  font-weight: 700;
+  color: #10b981;
+  margin: 4px 0 0;
+}
+
+#expenseList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#expenseList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+}
+
+#expenseList li:last-child {
+  border-bottom: none;
+}
+
+#expenseList button {
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  width: auto;
+  margin-top: 0;
+}
+
+#expenseList button:hover {
+  background: #fecaca;
+}

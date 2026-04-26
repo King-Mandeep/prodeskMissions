@@ -189,3 +189,134 @@ Used to improve spacing, card layout, and overall visual design.
 ## Note
 
 All AI-generated suggestions were carefully reviewed and implemented with understanding. The logic and structure were manually developed and tested.
+
+
+# Prompts.md
+
+This document lists the AI prompts used during the development of the "Dev Detective" GitHub User Search application.
+
+---
+
+## Prompt 1: Project Understanding
+
+**Prompt:**
+"How to build a GitHub user search app using HTML, CSS, and JavaScript without using any framework?"
+
+**Usage:**
+Used to understand the overall workflow of fetching user data from GitHub API and displaying it in a structured UI.
+
+---
+
+## Prompt 2: Fetch API Basics
+
+**Prompt:**
+"How to use fetch() with async/await to get data from an API in JavaScript?"
+
+**Usage:**
+Used to implement API calls for retrieving GitHub user data.
+
+---
+
+## Prompt 3: Handling API Responses
+
+**Prompt:**
+"How to check if an API response is successful and handle errors in fetch?"
+
+**Usage:**
+Used to implement error handling when a GitHub user is not found or API fails.
+
+---
+
+## Prompt 4: DOM Manipulation
+
+**Prompt:**
+"How to dynamically display API data in HTML using JavaScript?"
+
+**Usage:**
+Used to render user profile details like avatar, name, bio, and join date.
+
+---
+
+## Prompt 5: Date Formatting
+
+**Prompt:**
+"How to format a date string like '2023-01-25T12:00:00Z' into a readable format in JavaScript?"
+
+**Usage:**
+Used to display join date in a clean format like '25 Jan 2023'.
+
+---
+
+## Prompt 6: Loading State
+
+**Prompt:**
+"How to show a loading indicator while fetching data from an API?"
+
+**Usage:**
+Used to improve user experience by displaying a loading message during API calls.
+
+---
+
+## Prompt 7: Fetching Additional Data
+
+**Prompt:**
+"How to fetch related data from another API endpoint using data from the first API response?"
+
+**Usage:**
+Used to fetch repositories using the `repos_url` from the user object.
+
+---
+
+## Prompt 8: Array Sorting and Slicing
+
+**Prompt:**
+"How to sort an array of objects by date and get the latest 5 items in JavaScript?"
+
+**Usage:**
+Used to display the top 5 most recent repositories.
+
+---
+
+## Prompt 9: Creating Clickable Links
+
+**Prompt:**
+"How to create dynamic anchor tags in JavaScript that open in a new tab?"
+
+**Usage:**
+Used to make repository links clickable and open on GitHub.
+
+---
+
+## Prompt 10: UI Layout with Flexbox
+
+**Prompt:**
+"How to align two sections side by side using Flexbox?"
+
+**Usage:**
+Used to create a layout where profile and repositories appear side by side.
+
+---
+
+## Prompt 11: Card UI Design
+
+**Prompt:**
+"How to create a clean card layout using CSS with shadow and border-radius?"
+
+**Usage:**
+Used to style profile and repository sections into modern card components.
+
+---
+
+## Prompt 12: Debugging API Issues
+
+**Prompt:**
+"Why is my fetch request not returning expected data or showing undefined values?"
+
+**Usage:**
+Helped identify issues with incorrect data access and improved debugging skills.
+
+---
+
+## Note
+
+All AI-generated suggestions were reviewed and understood before implementation. The application logic, API handling, and UI improvements were manually developed and tested.

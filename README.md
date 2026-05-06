@@ -7,7 +7,8 @@ submitting all the misssions one by one
 3 mission
 <img width="1765" height="893" alt="image" src="https://github.com/user-attachments/assets/2b863d5e-8fce-4073-b5d3-0c9fe0ad1852" />
 4 mission
-<img width="1771" height="887" alt="image" src="https://github.com/user-attachments/assets/0b1d92d4-cf11-42f2-ad4e-1f9e229a9cbf" />
+<img width="1785" height="887" alt="image" src="https://github.com/user-attachments/assets/0abecee2-c15a-4e43-bf01-f50eeae1d0bf" />
+
 
 # AI Cover Letter Generator
 

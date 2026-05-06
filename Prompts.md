@@ -320,3 +320,134 @@ Helped identify issues with incorrect data access and improved debugging skills.
 ## Note
 
 All AI-generated suggestions were reviewed and understood before implementation. The application logic, API handling, and UI improvements were manually developed and tested.
+
+# mission 4
+# Prompts.md
+
+This document contains the AI prompts and guidance used during the development of the AI Cover Letter Generator project.
+
+---
+
+## Prompt 1: Project Planning
+
+**Prompt:**
+"How should I structure a full-stack AI cover letter generator using HTML, CSS, JavaScript, Node.js, and Express?"
+
+**Usage:**
+Used to understand the overall architecture and divide the project into frontend and backend responsibilities.
+
+---
+
+## Prompt 2: Backend Setup
+
+**Prompt:**
+"How to create a simple Express server with CORS and JSON middleware?"
+
+**Usage:**
+Used to set up the backend server and create API endpoints for handling AI requests.
+
+---
+
+## Prompt 3: Environment Variables
+
+**Prompt:**
+"How to securely store API keys using .env in Node.js?"
+
+**Usage:**
+Used to securely manage API keys and prevent exposing sensitive information in frontend code or GitHub repositories.
+
+---
+
+## Prompt 4: AI API Integration
+
+**Prompt:**
+"How to send prompts to an AI model API from a Node.js backend?"
+
+**Usage:**
+Used to integrate AI-generated cover letter functionality through an external AI API.
+
+---
+
+## Prompt 5: Prompt Engineering
+
+**Prompt:**
+"How to write an effective AI prompt for generating professional cover letters?"
+
+**Usage:**
+Used to improve the quality and structure of generated cover letters.
+
+---
+
+## Prompt 6: Fetch API Communication
+
+**Prompt:**
+"How to send POST requests from frontend JavaScript to a backend API?"
+
+**Usage:**
+Used to connect the frontend form with the backend `/generate` endpoint.
+
+---
+
+## Prompt 7: Loading State
+
+**Prompt:**
+"How to show a loading indicator while waiting for an async API response?"
+
+**Usage:**
+Used to improve user experience during AI content generation.
+
+---
+
+## Prompt 8: Error Handling
+
+**Prompt:**
+"How to handle API errors gracefully in frontend and backend applications?"
+
+**Usage:**
+Used to display meaningful error messages when API requests fail or rate limits are exceeded.
+
+---
+
+## Prompt 9: Clipboard Functionality
+
+**Prompt:**
+"How to copy generated text to clipboard using JavaScript?"
+
+**Usage:**
+Used to implement the copy button functionality for generated cover letters.
+
+---
+
+## Prompt 10: Responsive Layout Design
+
+**Prompt:**
+"How to create a responsive two-column layout using Flexbox in CSS?"
+
+**Usage:**
+Used to design the side-by-side layout for the form section and generated output section.
+
+---
+
+## Prompt 11: Modern UI Styling
+
+**Prompt:**
+"How to make a clean modern SaaS-style UI using CSS?"
+
+**Usage:**
+Used to improve spacing, shadows, cards, buttons, and overall visual hierarchy of the application.
+
+---
+
+## Prompt 12: Debugging AI API Issues
+
+**Prompt:**
+"Why is my AI API returning quota errors or model not found errors?"
+
+**Usage:**
+Used to debug API integration issues, model compatibility, and request limits during development.
+
+---
+
+## Note
+
+All AI-generated suggestions were reviewed, understood, and manually implemented. The application logic, backend integration, debugging, and UI improvements were tested and customized during development.

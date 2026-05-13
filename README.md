@@ -8,23 +8,9 @@ submitting all the misssions one by one
 <img width="1765" height="893" alt="image" src="https://github.com/user-attachments/assets/2b863d5e-8fce-4073-b5d3-0c9fe0ad1852" />
 4 mission
 <img width="1785" height="887" alt="image" src="https://github.com/user-attachments/assets/0abecee2-c15a-4e43-bf01-f50eeae1d0bf" />
+5 mission
+<img width="1884" height="923" alt="image" src="https://github.com/user-attachments/assets/f25352f7-f723-4d67-aea2-308c99226e47" />
 
 
-# AI Cover Letter Generator
 
-A full-stack AI-powered web application that generates professional cover letters using AI.
 
-## Features
-- AI-generated cover letters
-- Secure backend API handling
-- Copy functionality
-- Responsive UI
-- Loading & error states
-
-## Tech Stack
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- Express
-- OpenRouter API

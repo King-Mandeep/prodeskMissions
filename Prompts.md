@@ -451,3 +451,164 @@ Used to debug API integration issues, model compatibility, and request limits du
 ## Note
 
 All AI-generated suggestions were reviewed, understood, and manually implemented. The application logic, backend integration, debugging, and UI improvements were tested and customized during development.
+
+# Prompts.md
+
+This document contains the prompts and questions used during the development of the Kanban Task Board project.
+
+---
+
+## Prompt 1: Project Planning
+
+**Prompt:**
+"How should I structure a Kanban Task Board in React using components and state?"
+
+**Purpose:**
+Used to understand how to divide the application into reusable components such as TaskForm, Column, and TaskCard.
+
+---
+
+## Prompt 2: React State Management
+
+**Prompt:**
+"How do I store and update an array of tasks using useState in React?"
+
+**Purpose:**
+Used to manage tasks and update them when adding, editing, deleting, and moving between columns.
+
+---
+
+## Prompt 3: Creating Reusable Components
+
+**Prompt:**
+"How do I pass data and functions between parent and child components using props in React?"
+
+**Purpose:**
+Used to pass tasks and action handlers from App.jsx to Column and TaskCard components.
+
+---
+
+## Prompt 4: Adding Tasks
+
+**Prompt:**
+"How do I create a form in React to add a new task with title and priority?"
+
+**Purpose:**
+Used to build the TaskForm component and add new tasks to the To Do column.
+
+---
+
+## Prompt 5: Filtering Tasks by Status
+
+**Prompt:**
+"How do I filter tasks into To Do, In Progress, and Done columns?"
+
+**Purpose:**
+Used to display tasks in the correct column based on their status.
+
+---
+
+## Prompt 6: Moving Tasks
+
+**Prompt:**
+"How do I update one property in an object inside a React state array?"
+
+**Purpose:**
+Used to change the task status when a user selects a different column.
+
+---
+
+## Prompt 7: Deleting Tasks
+
+**Prompt:**
+"How do I remove an item from an array in React state?"
+
+**Purpose:**
+Used to delete tasks using the `filter()` method.
+
+---
+
+## Prompt 8: Inline Editing
+
+**Prompt:**
+"How do I implement inline editing for task titles in React?"
+
+**Purpose:**
+Used to toggle between display mode and edit mode for each task.
+
+---
+
+## Prompt 9: Local Storage Persistence
+
+**Prompt:**
+"How do I save React state to localStorage and restore it on page load?"
+
+**Purpose:**
+Used to persist tasks after page refresh.
+
+---
+
+## Prompt 10: Priority Badge Colors
+
+**Prompt:**
+"How do I conditionally apply Tailwind CSS classes based on task priority?"
+
+**Purpose:**
+Used to display High, Medium, and Low priority badges with different colors.
+
+---
+
+## Prompt 11: Responsive Layout
+
+**Prompt:**
+"How do I create a responsive three-column layout using Tailwind CSS?"
+
+**Purpose:**
+Used to make the board stack on mobile and display side-by-side on larger screens.
+
+---
+
+## Prompt 12: UI Polish
+
+**Prompt:**
+"How can I design a modern Kanban board UI using Tailwind CSS?"
+
+**Purpose:**
+Used to improve spacing, colors, task counters, and card styling.
+
+---
+
+## Prompt 13: Debugging State Issues
+
+**Prompt:**
+"Why is my task not moving between columns in React?"
+
+**Purpose:**
+Used to debug issues related to status values and state updates.
+
+---
+
+## Prompt 14: Deployment
+
+**Prompt:**
+"How do I deploy a Vite React application to Vercel?"
+
+**Purpose:**
+Used to create a live demo link for project submission.
+
+---
+
+## Prompt 15: Git and Version Control
+
+**Prompt:**
+"How do I push my React project to GitHub and update changes safely?"
+
+**Purpose:**
+Used to manage commits and maintain the project repository.
+
+---
+
+## Note
+
+All AI-generated suggestions were reviewed and manually implemented. The project structure, logic, debugging, and UI design were customized and tested during development.
+

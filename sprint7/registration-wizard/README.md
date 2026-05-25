@@ -1,4 +1,6 @@
 # Registration Wizard 🚀
+<img width="1702" height="889" alt="image" src="https://github.com/user-attachments/assets/bcdd1bb6-9e2c-44a5-906d-042cfbcdf12f" />
+
 
 A modern multi-step registration form built with React, Tailwind CSS, and Vite.
 
@@ -8,7 +10,7 @@ This project demonstrates state lifting, conditional rendering, real-time valida
 
 ## 🌐 Live Demo
 
-Add your Vercel deployment link here.
+[Add your Vercel deployment link here.](https://prodesk-missions-vkxw.vercel.app/)
 
 ---
 

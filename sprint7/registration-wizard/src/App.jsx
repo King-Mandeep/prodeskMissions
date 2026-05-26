@@ -7,13 +7,13 @@ import ProgressBar from "./components/ProgressBar";
 import Success from "./components/Success";
 
 function App() {
-  // Current active step
+  
   const [step, setStep] = useState(1);
 
-  // Success state
+  
   const [submitted, setSubmitted] = useState(false);
 
-  // Shared form state
+ 
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -23,24 +23,24 @@ function App() {
     confirmPassword: "",
   });
 
-  // Next Step
+ 
   const nextStep = () => {
     setStep((prev) => prev + 1);
   };
 
-  // Previous Step
+ 
   const prevStep = () => {
     setStep((prev) => prev - 1);
   };
 
-  // Final Submit
+ 
   const handleSubmit = () => {
     console.log(formData);
 
     setSubmitted(true);
   };
 
-  // Success Screen
+  
   if (submitted) {
     return <Success />;
   }

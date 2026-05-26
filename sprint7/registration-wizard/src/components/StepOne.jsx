@@ -1,25 +1,33 @@
+import InputField from "./InputField";
+import {
+  validateName,
+  validateDob,
+} from "../utils/validation";
 function StepOne({
   formData,
   setFormData,
   nextStep,
 }) {
-  // Validation
-  const isFirstNameValid =
-    formData.firstName.trim().length >= 2;
+  const isFirstNameValid = validateName(
+  formData.firstName
+);
 
-  const isLastNameValid =
-    formData.lastName.trim().length >= 2;
+const isLastNameValid = validateName(
+  formData.lastName
+);
 
-  const isDobValid = formData.dob !== "";
+const isDobValid = validateDob(
+  formData.dob
+);
 
-  // Overall Step Validity
+ 
   const isStepValid =
     isFirstNameValid &&
     isLastNameValid &&
     isDobValid;
 
-  // Handle Input Change
-  const handleChange = (e) => {
+  
+  const updateField = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -47,105 +55,57 @@ function StepOne({
       <div className="space-y-5">
         {/* First Name */}
         <div>
-          <label className="block mb-2 text-sm text-gray-300">
-            First Name
-          </label>
 
-          <input
-            type="text"
-            name="firstName"
-            placeholder="Enter first name"
-            value={formData.firstName}
-            onChange={handleChange}
-           className="
-  w-full
-  px-4
-  py-3
-  rounded-xl
-  bg-slate-800
-  border border-white/10
-  outline-none
-  focus:border-blue-500
-  focus:ring-2
-  focus:ring-blue-500/20
-  transition
-"
-          />
+         <InputField
+  label="First Name"
+  name="firstName"
+  placeholder="Enter first name"
+  value={formData.firstName}
+  onChange={updateField}
+  error={
+    !isFirstNameValid &&
+    formData.firstName.length > 0
+      ? "First name must be at least 2 characters."
+      : ""
+  }
+/>
 
-          {!isFirstNameValid &&
-            formData.firstName.length > 0 && (
-              <p className="text-red-400 text-sm mt-2">
-                First name must be at least 2 characters.
-              </p>
-            )}
         </div>
 
         {/* Last Name */}
         <div>
-          <label className="block mb-2 text-sm text-gray-300">
-            Last Name
-          </label>
 
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Enter last name"
-            value={formData.lastName}
-            onChange={handleChange}
-            className="
-  w-full
-  px-4
-  py-3
-  rounded-xl
-  bg-slate-800
-  border border-white/10
-  outline-none
-  focus:border-blue-500
-  focus:ring-2
-  focus:ring-blue-500/20
-  transition
-"
-          />
+        <InputField
+  label="Last Name"
+  name="lastName"
+  placeholder="Enter last name"
+  value={formData.lastName}
+  onChange={updateField}
+  error={
+    !isLastNameValid &&
+    formData.lastName.length > 0
+      ? "Last name must be at least 2 characters."
+      : ""
+  }
+/>
 
-          {!isLastNameValid &&
-            formData.lastName.length > 0 && (
-              <p className="text-red-400 text-sm mt-2">
-                Last name must be at least 2 characters.
-              </p>
-            )}
         </div>
 
         {/* DOB */}
         <div>
-          <label className="block mb-2 text-sm text-gray-300">
-            Date of Birth
-          </label>
 
-          <input
-            type="date"
-            name="dob"
-            value={formData.dob}
-            onChange={handleChange}
-            className="
-  w-full
-  px-4
-  py-3
-  rounded-xl
-  bg-slate-800
-  border border-white/10
-  outline-none
-  focus:border-blue-500
-  focus:ring-2
-  focus:ring-blue-500/20
-  transition
-"
-          />
-
-          {!isDobValid && (
-            <p className="text-red-400 text-sm mt-2">
-              Date of birth is required.
-            </p>
-          )}
+         <InputField
+  label="Date of Birth"
+  type="date"
+  name="dob"
+  value={formData.dob}
+  onChange={updateField}
+  error={
+    !isDobValid
+      ? "Date of birth is required."
+      : ""
+  }
+/>
         </div>
 
         {/* Button */}

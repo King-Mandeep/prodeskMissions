@@ -1,4 +1,10 @@
 import { useState } from "react";
+import InputField from "./InputField";
+import {
+  validateEmail,
+  validatePassword,
+  validateConfirmPassword,
+} from "../utils/validation";
 
 function StepTwo({
   formData,
@@ -6,35 +12,36 @@ function StepTwo({
   nextStep,
   prevStep,
 }) {
-  // Password visibility
+  
   const [showPassword, setShowPassword] =
     useState(false);
 
   const [showConfirmPassword, setShowConfirmPassword] =
     useState(false);
 
-  // Validation
-  const isEmailValid =
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-      formData.email
-    );
+  
+  const isEmailValid = validateEmail(
+  formData.email
+);
 
-  const isPasswordValid =
-    formData.password.length >= 8;
+const isPasswordValid = validatePassword(
+  formData.password
+);
 
-  const isConfirmPasswordValid =
-    formData.confirmPassword ===
-      formData.password &&
-    formData.confirmPassword !== "";
+const isConfirmPasswordValid =
+  validateConfirmPassword(
+    formData.password,
+    formData.confirmPassword
+  );
 
-  // Overall validity
+ 
   const isStepValid =
     isEmailValid &&
     isPasswordValid &&
     isConfirmPasswordValid;
 
-  // Handle input changes
-  const handleChange = (e) => {
+  
+  const updateField = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -62,141 +69,69 @@ function StepTwo({
       <div className="space-y-5">
         {/* Email */}
         <div>
-          <label className="block mb-2 text-sm text-gray-300">
-            Email Address
-          </label>
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter email"
-            value={formData.email}
-            onChange={handleChange}
-           className="
-  w-full
-  px-4
-  py-3
-  rounded-xl
-  bg-slate-800
-  border border-white/10
-  outline-none
-  focus:border-blue-500
-  focus:ring-2
-  focus:ring-blue-500/20
-  transition
-"
-          />
-
-          {!isEmailValid &&
-            formData.email.length > 0 && (
-              <p className="text-red-400 text-sm mt-2">
-                Please enter a valid email address.
-              </p>
-            )}
+         <InputField
+  label="Email Address"
+  type="email"
+  name="email"
+  placeholder="Enter email"
+  value={formData.email}
+  onChange={updateField}
+  error={
+    !isEmailValid &&
+    formData.email.length > 0
+      ? "Please enter a valid email address."
+      : ""
+  }
+/>
         </div>
 
         {/* Password */}
         <div>
-          <label className="block mb-2 text-sm text-gray-300">
-            Password
-          </label>
+         <InputField
+  label="Password"
+  type="password"
+  name="password"
+  placeholder="Enter password"
+  value={formData.password}
+  onChange={updateField}
+  error={
+    !isPasswordValid &&
+    formData.password.length > 0
+      ? "Password must be at least 8 characters."
+      : ""
+  }
+  showToggle={true}
+  isVisible={showPassword}
+  onToggle={() =>
+    setShowPassword(!showPassword)
+  }
+/>
 
-          <div className="relative">
-            <input
-              type={
-                showPassword ? "text" : "password"
-              }
-              name="password"
-              placeholder="Enter password"
-              value={formData.password}
-              onChange={handleChange}
-              className="
-  w-full
-  px-4
-  py-3
-  rounded-xl
-  bg-slate-800
-  border border-white/10
-  outline-none
-  focus:border-blue-500
-  focus:ring-2
-  focus:ring-blue-500/20
-  transition
-"
-            />
-
-            <button
-              type="button"
-              onClick={() =>
-                setShowPassword(!showPassword)
-              }
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-blue-400"
-            >
-              {showPassword ? "Hide" : "Show"}
-            </button>
-          </div>
-
-          {!isPasswordValid &&
-            formData.password.length > 0 && (
-              <p className="text-red-400 text-sm mt-2">
-                Password must be at least 8 characters.
-              </p>
-            )}
         </div>
 
         {/* Confirm Password */}
         <div>
-          <label className="block mb-2 text-sm text-gray-300">
-            Confirm Password
-          </label>
-
-          <div className="relative">
-            <input
-              type={
-                showConfirmPassword
-                  ? "text"
-                  : "password"
-              }
-              name="confirmPassword"
-              placeholder="Confirm password"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-             className="
-  w-full
-  px-4
-  py-3
-  rounded-xl
-  bg-slate-800
-  border border-white/10
-  outline-none
-  focus:border-blue-500
-  focus:ring-2
-  focus:ring-blue-500/20
-  transition
-"
-            />
-
-            <button
-              type="button"
-              onClick={() =>
-                setShowConfirmPassword(
-                  !showConfirmPassword
-                )
-              }
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-blue-400"
-            >
-              {showConfirmPassword
-                ? "Hide"
-                : "Show"}
-            </button>
-          </div>
-
-          {!isConfirmPasswordValid &&
-            formData.confirmPassword.length > 0 && (
-              <p className="text-red-400 text-sm mt-2">
-                Passwords do not match.
-              </p>
-            )}
+         <InputField
+  label="Confirm Password"
+  type="password"
+  name="confirmPassword"
+  placeholder="Confirm password"
+  value={formData.confirmPassword}
+  onChange={updateField}
+  error={
+    !isConfirmPasswordValid &&
+    formData.confirmPassword.length > 0
+      ? "Passwords do not match."
+      : ""
+  }
+  showToggle={true}
+  isVisible={showConfirmPassword}
+  onToggle={() =>
+    setShowConfirmPassword(
+      !showConfirmPassword
+    )
+  }
+/>
         </div>
 
         {/* Buttons */}
